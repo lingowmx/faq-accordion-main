@@ -3,5 +3,5 @@ interface AnswerProps {
 }
 
 export const Answer = ({ answer }: AnswerProps) => {
-  return <div>{answer}</div>;
+  return <p className="text-grayishPurple">{answer}</p>;
 };

@@ -3,5 +3,5 @@ interface QuestionsProps {
 }
 
 export const Question = ({ question }: QuestionsProps) => {
-  return <p className="text-blue-600">{question}</p>;
+  return <p className="text-darkPurple font-bold">{question}</p>;
 };

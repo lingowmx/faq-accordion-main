@@ -28,20 +28,21 @@ const myQuestions = [
 export const Questions = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   return (
-    <div className="">
+    <div>
       {myQuestions.map((q, index) => {
       const isOpen = openIndex === index
         return (
-          <div>
-            <div key={index} className="flex justify-between">
+          <div key={index}>
+            <div  className="flex justify-between items-center pt-2 pb-2 transition-all duration-1000">
               <Question question={q.question} />
               <ButtonIcons 
                 isOpen = {isOpen}
                 onClick={() => setOpenIndex(isOpen ? null : index)}/>
             </div>
-            <div className={isOpen ? 'block' : 'hidden'}>
+            <div className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}>
               <Answer answer={q.answer} />
             </div>
+            <div className="w-full border border-lightPink mt-2"></div>
           </div>
         );
       })}
