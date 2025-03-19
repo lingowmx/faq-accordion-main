@@ -3,7 +3,7 @@ import desktopImage from '../../assets/images/background-pattern-desktop.svg'
 
 export const BgImage = () => {
   return (
-    <picture>
+    <picture className='absolute'>
       <source srcSet={desktopImage} media='(min-width: 640px)'/>
       <source srcSet={mobileImage} media='(max-width: 639px)'/>
       <img src={mobileImage} alt="mobileImageBackground" />
