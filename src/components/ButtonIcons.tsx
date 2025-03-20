@@ -9,8 +9,8 @@ interface ButtonIconProps {
 export const ButtonIcons = ({ isOpen, onClick }: ButtonIconProps) => {
   return (
     <div>
-      <button onClick={onClick} className="cursor-pointer w-12 h-12 flex justify-end items-center">
-        <img src={isOpen ? IconMinus : IconPlus} alt="IconsPlusMinus" />
+      <button onClick={onClick} className="cursor-pointer w-12 h-12 flex justify-end items-center lg:w-10 lg:h-10">
+        <img src={isOpen ? IconMinus : IconPlus} alt="IconsPlusMinus" className="lg:w-12 lg:h-12" />
       </button>
     </div>
   );
